@@ -30,7 +30,7 @@ unsigned int collatzLen(uint64_t num) {
     return length;
 }
 
-unsigned int seqCollatz(unsigned int *maxlen, uint64_t lbound, 
+unsigned int seqCollatz(unsigned int *maxlen, uint64_t lbound,
                         uint64_t rbound) {
     unsigned int bestNumber = 0;
     *maxlen = 0;
@@ -50,9 +50,10 @@ int main() {
     unsigned int bestNumber = seqCollatz(&maxLen, lbound, rbound);
     uint64_t maxValue = collatzMaxValue(bestNumber);
 
-    std::cout << "Число: " << bestNumber 
-              << "\nДлина: " << maxLen 
-              << "\nМакс. значение: " << maxValue 
+    std::cout << "Число: " << bestNumber
+              << "\nДлина: " << maxLen
+              << "\nМакс. значение: " << maxValue
               << std::endl;
     return 0;
 }
+
